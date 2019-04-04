@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchIndexes Version="1.0">
+    <Documents>
+        <Document ID="F7AF1062-7536-404C-9184-21347F227B92">
+            <Title>BibTex</Title>
+            <Text>@article{kelly2006replicating,
+  title={Replicating empirical research in behavioral ecology: how and why it should be done but rarely ever is},
+  author={Kelly, Clint D},
+  journal={The Quarterly review of biology},
+  volume={81},
+  number={3},
+  pages={221--236},
+  year={2006},
+  publisher={The University of Chicago Press}
+}
+@article{wallach2018reproducible,
+  title={Reproducible research practices, transparency, and open access data in the biomedical literature, 2015--2017},
+  author={Wallach, Joshua D and Boyack, Kevin W and Ioannidis, John PA},
+  journal={PLoS biology},
+  volume={16},
+  number={11},
+  pages={e2006930},
+  year={2018},
+  publisher={Public Library of Science}
+}
+@article{gertler2018make,
+  title={How to make replication the norm (vol 554, pg 417, 2018)},
+  author={Gertler, Paul and Galiani, Sebastian and Romero, Mauricio},
+  journal={Nature},
+  volume={555},
+  number={7698},
+  pages={580--580},
+  year={2018},
+  publisher={Macmillan Publishers Ltd., London, England}
+}
+@article{simonsohn2015small,
+  title={Small telescopes: Detectability and the evaluation of replication results},
+  author={Simonsohn, Uri},
+  journal={Psychological science},
+  volume={26},
+  number={5},
+  pages={559--569},
+  year={2015},
+  publisher={Sage Publications Sage CA: Los Angeles, CA}
+}
+@article{gelman2006difference,
+  title={The difference between “significant” and “not significant” is not itself statistically significant},
+  author={Gelman, Andrew and Stern, Hal},
+  journal={The American Statistician},
+  volume={60},
+  number={4},
+  pages={328--331},
+  year={2006},
+  publisher={Taylor \&amp; Francis}
+}
+@article{riemer2016reappraisal,
+  title={A reappraisal of successive negative contrast in two populations of domestic dogs},
+  author={Riemer, Stefanie and Ellis, Sarah LH and Ryan, Sian and Thompson, Hannah and Burman, Oliver HP},
+  journal={Animal cognition},
+  volume={19},
+  number={3},
+  pages={471--481},
+  year={2016},
+  publisher={Springer}
+}
+@article{pavsukonis2016significance,
+  title={The significance of spatial memory for water finding in a tadpole-transporting frog},
+  author={Pa{\v{s}}ukonis, Andrius and Trenkwalder, Katharina and Ringler, Max and Ringler, Eva and Mangione, Rosanna and Steininger, Jolanda and Warrington, Ian and H{\"o}dl, Walter},
+  journal={Animal behaviour},
+  volume={116},
+  pages={89--98},
+  year={2016},
+  publisher={Elsevier}
+}
+@article{mendes2011primates,
+  title={Primates do not spontaneously use shape properties for object individuation: a competence or a performance problem?},
+  author={Mendes, Natacha and Rakoczy, Hannes and Call, Josep},
+  journal={Animal Cognition},
+  volume={14},
+  number={3},
+  pages={407--414},
+  year={2011},
+  publisher={Springer}
+}
+@article{bulla2015biparental,
+  title={Biparental incubation-scheduling: no experimental evidence for major energetic constraints},
+  author={Bulla, Martin and Cresswell, Will and Rutten, Anne L and Valcu, Mihai and Kempenaers, Bart},
+  journal={Behavioral Ecology},
+  volume={26},
+  number={1},
+  pages={30--37},
+  year={2015},
+  publisher={Oxford University Press UK}
+}
+@article{ala2016postmating,
+  title={Postmating--prezygotic isolation between two allopatric populations of Drosophila montana: fertilisation success differs under sperm competition},
+  author={Ala-Honkola, Outi and Ritchie, Michael G and Veltsos, Paris},
+  journal={Ecology and evolution},
+  volume={6},
+  number={6},
+  pages={1679--1691},
+  year={2016},
+  publisher={Wiley Online Library}
+}
+@article{jennings2014reproductive,
+  title={Reproductive isolation among allopatric Drosophila montana populations},
+  author={Jennings, Jackson H and Snook, Rhonda R and Hoikkala, Anneli},
+  journal={Evolution},
+  volume={68},
+  number={11},
+  pages={3095--3108},
+  year={2014},
+  publisher={Wiley Online Library}
+}
+</Text>
+        </Document>
+        <Document ID="E00EE3C7-DF2C-4CBD-8254-5DFA1B2C05EF">
+            <Title>Methods</Title>
+            <Text>I downloaded as .xml files 1 641 366 Open Access papers available in the PubMed database representing 7439 journals.    I then used code in R to select only those papers from journals categorized as “ecology, evolution, behaviour, or systematic” based on their ISSN number (SCimajor 2017). This resulted in a subset of 38 729 papers from 72 journals; the number of papers per journal ranged from xxx to xxx (mean ± SD: xx).
+
+I used code written in the Python language to text-mine this subset of papers for any permutation of the word “replicate” (i.e. “replic*”) in the Introduction and Discussion (see Head et al.). For each instance of “replic*” I extracted the sentence as well as the paper’s meta-data (doi, ISSN, etc.). Each of these instances was added as a row to a .csv file. 
+
+I eliminated from this group any papers from PLoS Computational Biology because these studies did not empirically test ecological or evolutionary hypotheses with living systems. Text-mined papers were from non-open access journals (e.g. Animal Cognition) that provided an open access publishing option as well as open access journals (e.g. Ecology &amp; Evolution). In order to compare rates of study replication in discipline-specific (I.e. Ecology and evolution) open access (and hybrid) journals with an multidisciplinary opera access journal I also text mined 3343 papers published in PeerJ. 
+
+I then included/excluded each paper based on whether the content of the extracted sentence dealt with the replication of a previously published study. I did not include conceptual replications but rather partial or exact replications (Kelly 2006). Relevant papers were then retrieved and carefully read to confirm their relevance. If the paper reported on a study replication, I retrieved the original paper, and from both papers I extracted the information necessary to calculate an effect size (Hedge’s d or Pearson’s r) and 95% confidence interval for the relationship under test. If the information required to calculate an effect size was not available in the text or tables we extracted data from figures using GraphClick. 
+
+There is no clear consensus as to what constitutes a successful replication (gelman2006difference; simonsohn2015small). Some claim the similar statistical significance, same effect direction,    
+
+The replication study was deemed successful if its 95% confidence interval overlapped that of the original study. I also noted whether the author(s) of the replicate study considered whether they successfully replicated the original finding.</Text>
+            <Comments>Clint Kelly 2019-04-02, 4:58 PM
+Need to figure out an hypothesis to test here.
+
+
+
+</Comments>
+        </Document>
+        <Document ID="4BF4FA5E-7B43-4765-A0F9-EFF25847E6B0">
+            <Title>Introduction</Title>
+            <Text>Rate and success of study replication in ecology and evolution
+
+The replication of empirical findings is fundamental to science yet it is generally ignored in the biosciences. Over the past decade, however, a replication crisis has prompted large-scale, systematic efforts to replicate foundational studies in psychology and biomedicine. Surprisingly, many of these replications have failed to repeat the findings of influential, high-impact work. Although little is known about the extent of these problems in ecology and evolution, there is no a priori reason to think that these fields are immune to the ails of other topics in the biosciences. Behavioural ecologists, for example, have a rather poor track record of replicating studies although considerable conceptual replication takes place (i.e. testing the same hypothesis but using different species and methods) (Kelly 2006).
+
+My aim here is two-fold. First, I attempt to determine how frequently studies are replicated in ecology and evolution by text-mining open access papers that were published in the category of Behaviour, Ecology and Systematics ecology. Second, I determine whether studies in ecology and evolution that claim to replicate previously published findings indeed do so. Third, I tested  the hypothesis that low replaction rates in open-access ecology and evolution journals (even open access ones) are due to their being relatively new and thus having a shorter publication history. I therefore compared rates in eco evo journals with those in a longer-standing multidisciplinary open access journal like PeerJ.
+
+By replication, I mean that a similar study (same species) was conducted again to test the same hypothesis using similar methods. Contrary to some authors (gertler2018make), I do not regard re-analysis of data as study replication.
+
+</Text>
+        </Document>
+        <Document ID="FF80EAB4-2EFF-4FA9-AB0C-576C813385D5">
+            <Title> Notes</Title>
+            <Text>Replicate in the sense of duplicating a phenomenon eg. Mesocosms replicating/mimicking what happens in nature
+For example van wijk et al. (2008) discuss replication with respect to experimental design.
+
+
+
+Ramirez et al’s (2014) replication of Semm and Demaine’s (1986) study (cited &gt; 150 times) examining magento sensitive cells in the pigeon’s visual system was not included in the forest plot. The original (~79%) and replicated (~0%) study both counted the number of magneto-sensitive cells in the pigeons system and will not yield effect sizes. Ramirez failed to replicate Semm and Demaine.
+
+
+Independently replicated in a separate study (e.g. Simon 2013 did replications in different centers within the same study).
+
+Trnka and Grim (2013) and Mychaleckyj et al. (2017) and Kalinkat et al. (2013) offer familiar platitudes that things need to be replicated. Replication “qualitatively” affirmed as in Kothapalli et al. (2016). 
+
+Goto et al. (2011) explicitly outline how to best repeat their procedure.
+
+
+
+
+Moreover, the eco-evo papers that I analyzed date from xxxx, which is not long before PeerJ.
+
+
+ biology an open access journal with a relatively long publication history (x years), the multidisciplinary journal PeerJ. 
+Perhaps the rate that I observed is not indicative of the overall rate 
+Is PubMed OA a good guide as to the state of the literature? Why would replications be less OA than not. I would predict these types of studies would be published at a higher rate in open access journals like PloS. 
+
+
+
+
+NOTES:
+Amos was unable to replicate Møller’s statistical analysis despite having the original dataset.
+
+
+
+Conceptual replication….
+phenomenon Burks et al. 2016 stated that they replicated Steiner et al. 2010 but it was a conceptual replication wherein the function of similar antennal morphologies was studied in two different hymenopteran species. Similarly, Marshall and Stevens (2014) and Kandul et al (2006) performed conceptual replications and stated that their finding replicate findings in other species.
+
+
+only 5 provided the data or statistics necessary to calculate an effect size. Muller et al. 2014 claimed to have replicated a cognition study in dogs reported by Range et al. (2011) but the latter provided only a Wilcoxon T+ statistic. Troncoso-Palacios 2016 mentioned that relevant data (molecular sequences, morphological characters) were not provided in original studies (e.g. Pincheira-Donoso and Núñez, 2005; Avila et al. 2010) and so the study (phylogeny building) could not be replicated. Troncos-Palacious et al. 2015 state that they could not replicate the analyses of Medina et al. 2013 due to small sample sizes. 
+
+Finally, Nagasawa et al. 2016 report partial, not raw, correlation coefficients; therefore, we could not determine whether they replicated McGreevy et al. 2013. 
+
+</Text>
+        </Document>
+        <Document ID="E99DF1A1-9784-4ED1-84B3-01CE2EAC3363">
+            <Title>Results &amp; Discussion</Title>
+            <Text>I found n=21 papers that discussed conducting a study replication (Table X); however, only 11 (0.028%) actually replicated a previously published study. The remaining 10 studies either did not replicate a specific study, discussed replications completed by others, or simply re-analyzed previously-published data (Table 1).
+
+Of those 11 studies that did replicate a study, I was able to calculate an effect size for both it and the original study in only five cases. In the other seven cases, one replicated study was meta-analytically compared with other similar studies, both the replication and original were experiments with qualitative outcomes and did not record data, or either the original study or replication did not provide the data required to calculate an effect size (Table 1).
+
+Authors of replications unanimously assessed the success of their replication based on the direction of the effect and its associated p-value. This method was accurate in only two cases (riemer2016reappraisal; pavsukonis2016significance) based on the method of assessment used here (i.e. overlapping 95% CIs). On the other hand, (mendes2011primates) stated that they replicated the original study when they did not while the opposite was true for (bulla2015biparental). (Ala2016postmating) partially replicated the findings of (jennings2014reproductive).
+
+Replication success in other research domains…
+
+
+My conservative analysis of the open access literature suggests that approximately 0.028% studies in ecology and evolutionary biology attempt to replicate a previously published study. Although there are no published rates for comparison in the eco-evo literature, the rate observed here is lower than that observed in economics, psychology or medicine (5%: wallach2018reproducible). 
+
+If the replication rate observed here is low, and should be increased, to what rate should it be increased? Perhaps there is no ‘golden rate’; rather, we should aim to replicate only influential studies such as those that are published in Nature, Science, and PNAS (kelly2006replicating). Arguments against study replication generally include their time and resource costs to pursuing novel research aims. However, that only approximately half of the replications supported the conclusions of the original studies suggests that there is need to replicate. The question ultimately becomes “How important in the grand scheme of science are the studies that are replicated here”?
+
+It is possible that the observed rates of replication are low because the studies analyzed here are largely open access papers published in non-open access journals. In other words, perhaps replications are more likely to be published in open access journals. I tested this hypothesis by comparing replication rates in PeerJ, an open access journal covering the biological and medical sciences, with those from the primary database. I found one study replication out of 3343 papers (0.030%) published in PeerJ, which does not differ significantly from the rate observed in more-specialized ecology and evolution journals. 
+
+It is also possible that my search of the literature missed replications. It seems unlikely, however, that authors would not use some form of the word “replicate” at least once in their paper.
+
+It is clear that authors are aware of the importance of study replication as many remark that there findings need to be replicated by others in order to confirm its validity.
+
+
+
+</Text>
+        </Document>
+    </Documents>
+</SearchIndexes>

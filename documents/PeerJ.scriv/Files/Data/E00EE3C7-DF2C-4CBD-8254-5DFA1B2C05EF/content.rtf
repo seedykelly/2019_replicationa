@@ -1,0 +1,24 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;\f1\fnil\fcharset0 TrebuchetMS;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+I downloaded as .xml files 1 641 366 Open Access papers available in the PubMed database representing 7439 journals.    I then used code in R to select only those papers from journals categorized as \'93ecology, evolution, behaviour, or systematic\'94 based on their ISSN number (SCimajor 2017). This resulted in a subset of 38 729 papers from 72 journals; the number of papers per journal ranged from xxx to xxx (mean \'b1 SD: xx).\
+\
+I used code written in the Python language to text-mine this subset of papers for any permutation of the word \'93replicate\'94 (i.e. \'93replic*\'94) in the Introduction and Discussion (see Head et al.). For each instance of \'93replic*\'94 I extracted the sentence as well as the paper\'92s meta-data (doi, ISSN, etc.). Each of these instances was added as a row to a .csv file. \
+\
+I eliminated from this group any papers from PLoS Computational Biology because these studies did not empirically test ecological or evolutionary hypotheses with living systems. Text-mined papers were from non-open access journals (e.g. Animal Cognition) that provided an open access publishing option as well as open access journals (e.g. Ecology & Evolution). {\field{\*\fldinst{HYPERLINK "scrivcmt://DBF8E1B5-8FF3-402B-A0DF-C06D82ED4612"}}{\fldrslt In order to compare rates of study replication in discipline-specific (I.e. Ecology and evolution) open access (and hybrid) journals with an multidisciplinary opera access journal I also text mined 3343 papers published in PeerJ. }}\
+\
+I then included/excluded each paper based on whether the content of the extracted sentence dealt with the replication of a previously published study. I did not include conceptual replications but rather partial or exact replications (Kelly 2006). Relevant papers were then retrieved and carefully read to confirm their relevance. If the paper reported on a study replication, I retrieved the original paper, and from both papers I extracted the information necessary to calculate an effect size (Hedge\'92s d or Pearson\'92s r) and 95% confidence interval for the relationship under test.
+\f1  
+\f0 If the information required to calculate an effect size was not available in the text or tables we extracted data from figures using GraphClick. \
+\
+There is no clear consensus as to what constitutes a successful replication (
+\f2 \cf2 \outl0\strokewidth0 \strokec2 gelman2006difference; simonsohn2015small)
+\f0 \cf2 \outl0\strokewidth0 . Some claim the similar statistical significance, same effect direction,    \
+\
+The replication study was deemed successful if its 95% confidence interval overlapped that of the original study. I also noted whether the author(s) of the replicate study considered whether they successfully replicated the original finding.}
